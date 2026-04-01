@@ -570,14 +570,6 @@
       </div>
     </div>
 
-    <!-- CALLOUT: only show if contract not configured -->
-    <div class="callout" id="deployCallout">
-      <span class="callout-icon">⚠</span>
-      <div>
-        <strong>Setup Required</strong>
-        Deploy <code>P2PLending.sol</code> on Sepolia via <a href="https://remix.ethereum.org" target="_blank">Remix IDE</a>,
-        then paste your contract address into <code>app.js → CONTRACT_ADDRESS</code>. See deployment steps below.
-      </div>
     </div>
 
     <!-- MAIN GRID -->
@@ -650,49 +642,6 @@
             <h3>No loans yet</h3>
             <p>Be the first — request a loan on the left.</p>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DEPLOYMENT GUIDE -->
-    <div class="panel" id="deployGuide" style="margin-bottom:40px;">
-      <div class="panel-header">
-        <span class="panel-title">🚀 Deployment Guide</span>
-        <span class="panel-badge">Remix + GitHub Pages</span>
-      </div>
-      <div class="panel-body" style="font-size:13px; line-height:2;">
-        <strong style="font-family:var(--font-head); font-size:15px;">Step 1 — Deploy Contract (Remix IDE)</strong>
-        <ol style="margin: 10px 0 20px 20px; color: var(--muted);">
-          <li>Go to <a href="https://remix.ethereum.org" target="_blank" style="color:var(--accent2)">remix.ethereum.org</a> → create <code>P2PLending.sol</code> → paste contract code</li>
-          <li>Compile with Solidity <strong>0.8.19+</strong></li>
-          <li>In Deploy tab: Environment = <strong>Injected Provider (MetaMask)</strong></li>
-          <li>Switch MetaMask to <strong>Sepolia testnet</strong> (get test ETH from <a href="https://sepoliafaucet.com" target="_blank" style="color:var(--accent2)">sepoliafaucet.com</a>)</li>
-          <li>Click <strong>Deploy</strong> → confirm in MetaMask</li>
-          <li>Copy the deployed contract address from Remix</li>
-        </ol>
-
-        <strong style="font-family:var(--font-head); font-size:15px;">Step 2 — Configure Frontend</strong>
-        <ol style="margin: 10px 0 20px 20px; color: var(--muted);">
-          <li>Open <code>app.js</code></li>
-          <li>Replace <code>"YOUR_CONTRACT_ADDRESS_HERE"</code> with your address</li>
-          <li>Save the file</li>
-        </ol>
-
-        <strong style="font-family:var(--font-head); font-size:15px;">Step 3 — Deploy to GitHub Pages</strong>
-        <ol style="margin: 10px 0 20px 20px; color: var(--muted);">
-          <li>Create a GitHub repo (e.g. <code>p2p-lending-dapp</code>)</li>
-          <li>Push <code>index.html</code>, <code>app.js</code> to the repo root</li>
-          <li>Go to repo <strong>Settings → Pages</strong></li>
-          <li>Source: <strong>Deploy from branch → main → / (root)</strong></li>
-          <li>Your DApp is live at <code>https://&lt;username&gt;.github.io/p2p-lending-dapp</code></li>
-        </ol>
-
-        <div style="background:rgba(61,255,160,0.05); border:1px solid rgba(61,255,160,0.15); border-radius:8px; padding:14px 18px; margin-top:8px; color:var(--muted);">
-          <strong style="color:var(--accent); display:block; margin-bottom:6px;">💡 Tool Recommendation</strong>
-          GitHub Pages works great for this DApp since there's no backend. For a better developer experience, consider using 
-          <strong style="color:var(--text)">Hardhat</strong> (instead of Remix) for local testing + deployment scripts, and 
-          <strong style="color:var(--text)">Vercel</strong> (instead of GitHub Pages) for instant deployments with custom domains. 
-          Both are free and production-grade.
         </div>
       </div>
     </div>

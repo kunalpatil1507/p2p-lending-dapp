@@ -87,12 +87,8 @@ async function connectWallet() {
     connectBtn.classList.add("connected");
 
     // Init contract
-    if (CONTRACT_ADDRESS !== "YOUR_CONTRACT_ADDRESS_HERE") {
-      contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
-      await loadLoans();
-    } else {
-      toast("⚙️ Update CONTRACT_ADDRESS in app.js after deployment", "warning", 10000);
-    }
+    contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, signer);
+    await loadLoans();
 
     // Listen for account changes
     window.ethereum.on("accountsChanged", () => location.reload());
